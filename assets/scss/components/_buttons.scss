@@ -1,0 +1,61 @@
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 5em;
+  min-width: 120px;
+  padding: 1em 0;
+  cursor: pointer;
+
+  &-cta {
+    margin: 5px;
+
+    &--primary {
+      background-color: $white;
+    }
+
+    &--secondary {
+      background-color: transparent;
+      border: 1px solid $white;
+      transition: 150ms ease-in;
+
+      &:hover {
+        background-color: $cta-very-light-red;
+      }
+    }
+  }
+}
+
+.nav {
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25em;
+    border-top: 1px solid rgba($grayish-blue, 0.5);
+    padding: 1.5em;
+  }
+
+  &__login {
+    background: transparent;
+    padding: 0.75em 0;
+    transition: 100ms opacity ease-in;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__signup {
+    background: linear-gradient(
+      to right,
+      $grad-very-light-red 10%,
+      $grad-light-red 100%
+    );
+    opacity: 0.85;
+    transition: 100ms opacity ease-in;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

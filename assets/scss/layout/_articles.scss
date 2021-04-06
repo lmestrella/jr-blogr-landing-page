@@ -1,0 +1,23 @@
+.article {
+  // outline: 1px solid lightseagreen;
+  // margin: 1.75em 0;
+
+  &__title {
+    padding: 0 10%;
+  }
+
+  &__paragraph {
+    width: Min(28.125em, 90%);
+    padding: 1em 5%;
+  }
+}
+
+.blog {
+  &__section {
+    &:nth-of-type(2) {
+      > .article {
+        padding-bottom: 5em;
+      }
+    }
+  }
+}

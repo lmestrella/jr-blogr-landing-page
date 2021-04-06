@@ -12,11 +12,20 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+    <script src="./assets/js/app.js" defer></script>
+
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body class="blog grid">
     <div class="blog__intro">
-      <header class="blog__header">
+      <header class="blog__header flex flex-jc-sb flex-ai-fe">
         <div class="blog__logo">
           <img src="./assets/images/logo.svg" alt="blogr logo" />
         </div>
@@ -25,70 +34,102 @@
           <div class="nav__hamburger">
             <img src="./assets/images/icon-hamburger.svg" alt="menu icon" />
           </div>
-
-          <div class="nav__wrapper">
-            <div class="nav__link-group">
-              <h4 class="nav__link-name">Product</h4>
-              <ul class="nav__link-list">
-                <li><a href="#_">Overview</a></li>
-                <li><a href="#_">Pricing</a></li>
-                <li><a href="#_">Marketplace</a></li>
-                <li><a href="#_">Features</a></li>
-                <li><a href="#_">Integrations</a></li>
-              </ul>
-            </div>
-
-            <div class="nav__link-group">
-              <h4 class="nav__link-name">Company</h4>
-              <ul class="nav__link-list">
-                <li><a href="#_">About</a></li>
-                <li><a href="#_">Team</a></li>
-                <li><a href="#_">Blog</a></li>
-                <li><a href="#_">Careers</a></li>
-              </ul>
-            </div>
-
-            <div class="nav__link-group">
-              <h4 class="nav__link-name">Connect</h4>
-              <ul class="nav__link-list">
-                <li><a href="#_">Contact</a></li>
-                <li><a href="#_">Newsletter</a></li>
-                <li><a href="#_">LinkedIn</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="nav__buttons">
-            <button class="nav__login btn">Login</button>
-            <button class="nav__signup btn">Sign Up</button>
+          <div class="nav__close">
+            <img src="./assets/images/icon-close.svg" alt="close menu icon" />
           </div>
         </nav>
       </header>
 
-      <div class="blog__intro-text">
-        <h1>A modern publishing platform</h1>
-        <span>Grow your audience and build your online brand</span>
-      </div>
+      <div class="blog__intro-content flex flex-fd-col flex-ai-c">
+        <div class="blog__intro-text flex flex-fd-col flex-ai-c">
+          <h1>A modern publishing platform</h1>
+          <span>Grow your audience and build your online brand</span>
+        </div>
 
-      <div class="blog__intro-cta">
-        <button class="btn btn-cta">Start for Free</button>
-        <button class="btn btn-cta">Learn More</button>
+        <div class="blog__intro-cta">
+          <button class="btn btn-cta btn-cta--primary">Start for Free</button>
+          <button class="btn btn-cta btn-cta--secondary">Learn More</button>
+        </div>
       </div>
     </div>
 
-    <div class="blog__content">
-      <h2 class="blog__title">Designed for the future</h2>
+    <div
+      class="nav__wrapper nav__wrapper--light nav__wrapper--hidden flex flex-fd-col"
+    >
+      <div>
+        <div class="nav__link-group">
+          <h4 class="nav__link-name nav__link-name--dropdown">
+            Product
+            <span>
+              <img
+                src="./assets/images/icon-arrow-dark.svg"
+                alt="collapse arrow icon"
+              />
+            </span>
+          </h4>
+          <ul class="nav__link-list nav__link-list--collapse">
+            <li><a href="#_">Overview</a></li>
+            <li><a href="#_">Pricing</a></li>
+            <li><a href="#_">Marketplace</a></li>
+            <li><a href="#_">Features</a></li>
+            <li><a href="#_">Integrations</a></li>
+          </ul>
+        </div>
 
+        <div class="nav__link-group">
+          <h4 class="nav__link-name nav__link-name--dropdown">
+            Company
+            <span>
+              <img
+                src="./assets/images/icon-arrow-dark.svg"
+                alt="collapse arrow icon"
+              />
+            </span>
+          </h4>
+          <ul class="nav__link-list nav__link-list--collapse">
+            <li><a href="#_">About</a></li>
+            <li><a href="#_">Team</a></li>
+            <li><a href="#_">Blog</a></li>
+            <li><a href="#_">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__link-group">
+          <h4 class="nav__link-name nav__link-name--dropdown">
+            Connect
+            <span>
+              <img
+                src="./assets/images/icon-arrow-dark.svg"
+                alt="collapse arrow icon"
+              />
+            </span>
+          </h4>
+          <ul class="nav__link-list nav__link-list--collapse">
+            <li><a href="#_">Contact</a></li>
+            <li><a href="#_">Newsletter</a></li>
+            <li><a href="#_">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav__buttons">
+        <button class="nav__login btn">Login</button>
+        <button class="nav__signup btn">Sign Up</button>
+      </div>
+    </div>
+
+    <div class="blog__content grid">
       <!-- SECTION 1 -->
-      <section class="blog__section">
-        <div class="blog__editor-img">
+      <section class="blog__section grid grid-ji-c">
+        <h2 class="blog__title">Designed for the future</h2>
+        <div class="blog__illustration-editor">
           <img
             src="./assets/images/illustration-editor-mobile.svg"
             alt="editor image"
           />
         </div>
 
-        <article class="article">
+        <article class="article flex flex-fd-col flex-ai-c">
           <h3 class="article__title">Introducing an extensible editor</h3>
           <p class="article__paragraph">
             Blogr features an exceedingly intuitive interface which lets you
@@ -100,7 +141,7 @@
           </p>
         </article>
 
-        <article class="article">
+        <article class="article flex flex-fd-col flex-ai-c">
           <h3 class="article__title">Robust content management</h3>
           <p class="article__paragraph">
             Flexible content management enables users to easily move through
@@ -113,16 +154,18 @@
 
       <!-- SECTION 2 -->
       <section class="blog__section">
-        <div class="blog__phones-img">
+        <div class="blog__illustration-phones">
           <img
             src="./assets/images/illustration-phones.svg"
             alt="phones image"
           />
         </div>
 
-        <article class="article">
-          <h3 class="article__title">State of the Art Infrastructure</h3>
-          <p class="article__paragraph">
+        <article class="article flex flex-fd-col flex-ai-c">
+          <h3 class="article__title article__title--light article__title--big">
+            State of the Art Infrastructure
+          </h3>
+          <p class="article__paragraph article__paragraph--light">
             With reliability and speed in mind, worldwide data centers provide
             the backbone for ultra-fast connectivity. This ensures your site
             will load instantly, no matter where your readers are, keeping your
@@ -134,15 +177,15 @@
       </section>
 
       <!-- SECTION 3 -->
-      <section class="blog__section">
-        <div class="blog__laptop-img">
+      <section class="blog__section grid grid-ji-c">
+        <div class="blog__illustration-laptop">
           <img
             src="./assets/images/illustration-laptop-mobile.svg"
             alt="laptop image"
           />
         </div>
 
-        <article class="article">
+        <article class="article flex flex-fd-col flex-ai-c">
           <h3 class="article__title">Free, open, simple</h3>
           <p class="article__paragraph">
             Blogr is a free and open source application backed by a large
@@ -154,7 +197,7 @@
           </p>
         </article>
 
-        <article class="article">
+        <article class="article flex flex-fd-col flex-ai-c">
           <h3 class="article__title">Powerful tooling</h3>
           <p class="article__paragraph">
             Batteries included. We built a simple and straightforward CLI tool
@@ -165,13 +208,13 @@
       </section>
     </div>
 
-    <footer class="blog__footer">
+    <footer class="blog__footer flex flex-fd-col flex-ai-c">
       <div class="blog__logo">
         <img src="./assets/images/logo.svg" alt="blogr logo" />
       </div>
 
       <nav class="nav nav--dark">
-        <div class="nav__wrapper">
+        <div class="nav__wrapper flex flex-fd-col">
           <div class="nav__link-group">
             <h4 class="nav__link-name">Product</h4>
             <ul class="nav__link-list">

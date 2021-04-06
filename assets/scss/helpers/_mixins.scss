@@ -1,0 +1,16 @@
+@mixin pseudo($element, $content: "") {
+  &::#{$element} {
+    content: $content;
+    position: absolute;
+    display: block;
+    @content;
+  }
+}
+
+@mixin background-image($url) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @content;
+}

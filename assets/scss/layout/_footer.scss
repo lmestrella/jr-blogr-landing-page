@@ -1,0 +1,23 @@
+.blog {
+  &__footer {
+    row-gap: 2em;
+    border-top-right-radius: $section-b-radius;
+    background: $very-dark-black-blue;
+    padding: 4em 0 3em;
+
+    & .nav {
+      &__wrapper {
+        position: relative;
+        margin: 0;
+      }
+
+      &__link-group:last-child {
+        padding-top: 1em;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 5.5em;
+  }
+}

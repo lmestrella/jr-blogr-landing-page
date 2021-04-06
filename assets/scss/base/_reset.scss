@@ -8,5 +8,14 @@
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
 }

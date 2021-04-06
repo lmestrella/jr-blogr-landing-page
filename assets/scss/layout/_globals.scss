@@ -1,0 +1,131 @@
+.flex {
+  display: flex;
+
+  &-fd-col {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-fe {
+    align-items: flex-end;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-ji-c {
+    justify-items: center;
+  }
+}
+
+.blog {
+  row-gap: 4em;
+  overflow-x: hidden;
+
+  &__intro {
+    position: relative;
+    border-bottom-left-radius: $section-b-radius;
+    padding: 3.125em 6% 1.875em;
+    overflow: hidden;
+    @include background-image(url(../images/bg-pattern-intro.svg)) {
+      background-position: right 65% bottom 68%;
+      background-size: 1120px;
+    }
+
+    @include pseudo(before) {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(
+        to bottom,
+        $grad-very-light-red 0%,
+        $grad-light-red 100%
+      );
+      z-index: -1;
+    }
+
+    &-content {
+      row-gap: 2em;
+      margin: 6em 0;
+    }
+
+    &-text {
+      row-gap: 0.5em;
+
+      > span {
+        display: inline-block;
+        width: 25ch;
+      }
+    }
+  }
+
+  &__content {
+    row-gap: 2.5em;
+  }
+
+  &__illustration {
+    &-editor,
+    &-laptop {
+      margin: 1em 0;
+      filter: drop-shadow(0 0.5em 1em rgba($very-dark-blue, 0.2));
+    }
+
+    &-laptop {
+      transform: scale(1.25);
+      margin: 2em 0;
+    }
+  }
+
+  &__section {
+    &:not(:nth-of-type(2)) {
+      row-gap: 1.75em;
+    }
+
+    &:nth-of-type(2) {
+      position: relative;
+
+      // SECTION 2 - background
+      > div:last-child {
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        bottom: 0;
+        border-top-right-radius: $section-b-radius;
+        border-bottom-left-radius: $section-b-radius;
+        overflow: hidden;
+        z-index: -999;
+
+        @include pseudo(before) {
+          position: relative;
+          height: 100%;
+          background: linear-gradient(
+            to left,
+            $very-dark-desaturated-blue 0%,
+            $very-dark-gray-blue 100%
+          );
+          z-index: -1;
+        }
+
+        @include pseudo(after) {
+          bottom: 42.5%;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          @include background-image(url(../images/bg-pattern-circles.svg)) {
+            background-size: 160%;
+            // background-position: left 50% bottom -90%;
+          }
+        }
+      }
+    }
+  }
+}
